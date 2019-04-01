@@ -1,0 +1,32 @@
+<p>
+  view2 works!
+</p>
+name:
+<input type="text"  nane="name" [(ngModel)]="empobj.name">
+Age:
+<input type="text" name="age" [(ngModel)]="empobj.age">
+<button type="submit" name="button"  (click)="addrow()">add row</button>
+
+<table>
+  <tr>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Action</th>
+</tr>
+<tr *ngFor="let emp of Employees ">
+  <td>{{emp.name}}</td>
+  <td>{{emp.age}}</td>
+  <td><button  type="text"  (click)="updrow(emp)">update</button></td>
+</tr>
+
+</table>
+  <div>
+<h1>updation</h1>
+name:
+<input type="text"  nane="name" [(ngModel)]="empobj.upname">
+Age:
+<input type="text" name="age" [(ngModel)]="empobj.upage">
+
+
+ 
+</div>

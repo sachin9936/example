@@ -1,0 +1,42 @@
+
+  
+
+<h1> Welcome </h1>
+<div  align="center" color="red">
+name:
+<input type="text" name="name"  [(ngModel)]="NAME"><br>
+ID:
+<input type="text"  name="ID"  [(ngModel)]="ID"><br>
+
+CITY:
+<input type="text" name="city" [(ngModel)]="CITY">
+<button type="submit" (click)="addrow()">AddRow</button>
+</div>
+<table class="table" border="3">
+<tr>
+  <th>NAME</th>
+  <th>ID</th>
+  <th>CITY</th>
+  <th>Action</th>
+</tr>
+<tr *ngFor="let emp of Student; let i=index">
+  <td>{{emp.name | uppercase}}</td>
+  <td>{{emp.id | uppercase}}</td>
+  <td>{{emp.city | uppercase }}</td>
+  <td><button type="submit" (click)="updrow(emp)"> Update</button>
+    
+  <button type="submit"  (click)="delete(i)">delete</button>
+      </td>
+</tr>
+
+</table>
+<h1>Updation</h1>
+name:
+<input type="text" name="name"  [(ngModel)]="updatedname"><br>
+ID:
+<input type="text"  name="ID"  [(ngModel)]="updatedid"><br>
+
+CITY:
+<input type="text" name="city" [(ngModel)]="updatedcity">
+
+
